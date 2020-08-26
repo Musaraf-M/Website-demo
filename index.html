@@ -38,9 +38,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
 
-<body data-spy="scroll" data-target=".navbar">
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
 
     <!-- Preloader -->
     <div id="preloader">
@@ -48,10 +51,16 @@
     </div>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-fixed-top">
+        <nav class="navbar navbar-fixed-top white-nav-top">
             <div class="container-fluid">
                 <div class="site-nav-wrapper">
+                    <div class="navbar-header">
 
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+
+                    </div>
 
 
                     <!-- Main Menu -->
@@ -70,6 +79,24 @@
                     </div>
 
 
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+
+                                <li><a class="smooth-scroll" href="#home">Home</a></li>
+                                <li><a class="smooth-scroll" href="#service">Service</a></li>
+                                <li><a class="smooth-scroll" href="#about">About</a></li>
+                                <li><a class="smooth-scroll" href="#portfolio">Portfolio</a></li>
+                                <li><a class="smooth-scroll" href="#team">Team</a></li>
+                                <li><a class="smooth-scroll" href="#blog">Blog</a></li>
+                                <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -227,7 +254,7 @@
     <!-- About ends -->
 
     <!-- Portfolio -->
-    <section class="portfolio">
+    <section id="portfolio">
         <div class="container service-heading">
 
             <div class="col-lg-6 heading content-box-md">
@@ -492,7 +519,7 @@
                 </div>
             </div>
     </section>
-    <!-- Portfolio ends-->
+    <!-- blog ends-->
 
     <!-- Contact-->
     <section id="contact">

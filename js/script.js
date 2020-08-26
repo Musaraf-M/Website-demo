@@ -1,4 +1,11 @@
 /* =========================================
+                Preloader
+============================================ */
+$(window).on('load', function() { // makes sure that whole site is loaded
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+});
+/* =========================================
               Stats
 ============================================ */
 $(function() {
@@ -91,7 +98,7 @@ $(function() {
 
     function showHideNav() {
 
-        if ($(window).scrollTop() > 150) {
+        if ($(window).scrollTop() > 650) {
 
             // Show white nav
             $("nav").addClass("white-nav-top");
@@ -130,6 +137,23 @@ $(function() {
             scrollTop: $(section_id).offset().top - 64
         }, 1250, "easeInOutExpo");
 
+    });
+
+});
+
+/* =========================================
+              Mobile Menu
+============================================ */
+$(function() {
+
+    // Show mobile nav
+    $("#mobile-nav-open-btn").click(function() {
+        $("#mobile-nav").css("height", "100%");
+    });
+
+    // Hide mobile nav
+    $("#mobile-nav-close-btn, #mobile-nav a").click(function() {
+        $("#mobile-nav").css("height", "0%");
     });
 
 });
